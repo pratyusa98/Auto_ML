@@ -1,0 +1,33 @@
+1. TPOT
+Now generally there are two types of TPOT:
+TPOT classifier
+TPOT regressor.
+
+from tpot import TPOTClassifier
+pot = TPOTClassifier(
+    generations=5,
+    population_size=20,
+    verbosity=2,
+    scoring='roc_auc',
+    random_state=42,
+    disable_update_check=True,
+    config_dict='TPOT light'
+)
+tpot.fit(x_train, y_train)
+
+
+2. auto sklearn
+
+import autosklearn.classification
+cls = autosklearn.classification.AutoSklearnClassifier()
+cls.fit(X_train, y_train)
+predictions = cls.predict(X_test)
+
+
+3. Google AutoML
+4. H2O AutoML
+5. Azure AutoML
+6. AutoKeras
+
+https://medium.com/@chauhanrutvik21r/automl-machine-learning-in-just-5-10-lines-of-code-for-people-who-does-not-know-machine-learning-3027ec37ee40
+https://github.com/srivatsan88/YouTubeLI
